@@ -1,0 +1,29 @@
+﻿@using Entities.Concretes
+@model List<Product>
+
+@{
+    Layout = null;
+}
+
+<html>
+    <span>Products</span>
+    <link href="~/lib//bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+
+    <div class="container">
+        <table class="table table-bordered table-striped">
+
+            <tr>
+                <th>Ad</th>
+            </tr>
+
+            @foreach(var item in Model){
+                <tr>
+                    <td>
+                        @item.ProductName
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</html>
