@@ -23,6 +23,11 @@ namespace Business.Concretes
             _productDal.Add(product);
         }
 
+        public void Delete(Product product)
+        {
+           _productDal.Delete(product);
+        }
+
         public List<Product> GetAll()
         {
             return _productDal.GetAll();

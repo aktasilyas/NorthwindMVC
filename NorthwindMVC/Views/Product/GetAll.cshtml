@@ -6,24 +6,45 @@
 }
 
 <html>
-    <span>Products</span>
-    <link href="~/lib//bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+<link href="~/lib//bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 
-    <div class="container">
-        <table class="table table-bordered table-striped">
+<div class="container">
+    <div class="p-5 w-50 m-0">
+        <a href="/Product/Add" class="btn btn-success">Add Product</a>
+    </div>
+    <br />
+        <table class="table table-bordered table-striped h-75 overflow-auto">
 
             <tr>
-                <th>Ad</th>
+                <th>Id</th>
+                <th>Category Id</th>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>UnitsInStock</th>
             </tr>
 
-            @foreach(var item in Model){
+            @foreach (var item in Model)
+            {
                 <tr>
                     <td>
+                        @item.ProductId
+                    </td>
+                    <td>
+                        @item.CategoryId
+                    </td>
+                    <td>
                         @item.ProductName
+                    </td>
+                    <td>
+                        @item.UnitPrice
+                    </td>
+                    <td>
+                        @item.UnitsInStock
                     </td>
                 </tr>
             }
         </table>
-    </div>
+
+</div>
 
 </html>

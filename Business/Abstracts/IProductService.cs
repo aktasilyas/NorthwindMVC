@@ -11,5 +11,6 @@ namespace Business.Abstracts
     {
         List<Product> GetAll();
         void Add(Product product);
+        void Delete(Product product);
     }
 }
